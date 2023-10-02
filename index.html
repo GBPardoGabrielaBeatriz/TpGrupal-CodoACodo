@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>MENU</title>
+  </head>
+
+  <body>
+<!-- HEADER -->
+    <header>
+      <div class="logo">
+        <img src="imgs/logo.png" alt="" />
+        <h2>MENU</h2>
+      </div>
+      <nav>
+        <a href="#inicio" onclick="seleccionar()">Quiénes Somos</a>
+        <a href="#menu" onclick="seleccionar()">Menu</a>
+        <a href="#sucursales" onclick="seleccionar()">Sucursales</a>
+        <a href="#contacto" onclick="seleccionar()">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- BANNER -->
+      <section id="arriba" class="banner">
+        <h3>Bienvenidos!
+        </h3>
+        <div><button>Pedir comida</button></div>
+      </section>
+      <!-- QUIENES SOMOS -->
+      <section id="inicio" class="quienessomos">
+        <div>
+          <img src="imgs/cook-657352_1280.jpg" alt="" />
+        </div>
+        <div class="caja">
+          <h3>Somos <span>La Hamburgueseria</span></h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            recusandae esse modi sint labore vero maxime. Beatae optio
+            accusantium delectus veniam, quibusdam fugiat alias! Minima facilis
+            praesentium adipisci eum dolorum!
+          </p>
+        </div>
+      </section>
+      <!-- NUESTROS SERVICIOS -->
+      <section id="menu" class="card">
+        <h3>Nuestros Productos</h3>
+        <!--ACA METEMOS GALERIA DE FOTOS-->
+        <div class="galeria">
+          <article class="cards">
+              <figure>
+                  <img src="imgs/burguer.jpg" alt="burguer en 1er plano">
+                  <figcaption>
+                      <h3> Burguer</h3>
+                  </figcaption>
+              </figure>
+          </article>
+          <article class="cards">
+              <figure>
+                  <img src="imgs/fritas.jpg" alt="fritas en 1er plano">
+                  <figcaption>
+                      <h3>Fritas</h3>
+                  </figcaption>
+              </figure>
+          </article>
+          <article class="cards">
+              <figure>
+                  <img src="imgs/pizzita.jpg" alt="pizzita en 1er plano">
+                  <figcaption>
+                      <h3> Pizza</h3>
+                  </figcaption>
+              </figure>
+          </article>
+          <article class="cards">
+            <figure>
+                <img src="imgs/pastas.jpg" alt="pastas en 1er plano">
+                <figcaption>
+                    <h3> Pastas</h3>
+                </figcaption>
+            </figure>
+        </article>
+      </div>
+      
+          <div class="caja-padre">
+            <div class="caja-hija">
+              <img src="imgs/logo.png"  alt="" />
+              <h2>Menu1</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nostrum, animi aliquid ipsam maxime eveniet ut ullam neque,
+                vitae odit nemo beatae sed a labore sunt quae, repellendus quam.
+                Assumenda, temporibus!
+              </p>
+              <button class="boton">Detalle</button>
+            </div>
+
+            <div class="caja-hija">
+              <img src="imgs/logo.png" class="img" alt="" />
+              <h2>Menu2</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Officia, molestiae qui sed quia reprehenderit corrupti pariatur
+                error laboriosam repellat odit, dolorum iste nulla soluta
+                quaerat, aut suscipit eos dolorem neque!
+              </p>
+              <button class="boton">Detalle</button>
+            </div>
+
+            <div class="caja-hija">
+              <img src="imgs/logo.png" class="img" alt="" />
+              <h2>Menu3</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Architecto, ipsa animi voluptatem dolores molestiae itaque!
+                Eveniet dolores eum veniam vel odio hic perferendis, inventore
+                dolore cumque ut voluptate minima nihil?
+              </p>
+              <button class="boton">Detalle</button>
+            </div>
+          </div>
+      </section>
+      <!-- CARACTERISTICAS -->
+      <section id="sucursales" class="caracteristicas">
+        <div class="columna">
+          <p>
+            <i class="fa-sharp fa-regular fa-circle-check"></i> Cualquier medio de pago
+          </p>
+          <p>
+            <i class="fa-sharp fa-regular fa-circle-check"></i> Elaboracion en el acto
+          </p>
+          <p>
+            <i class="fa-sharp fa-regular fa-circle-check"></i> Amplia zona de reparto
+          </p>
+          <p>
+            <i class="fa-sharp fa-regular fa-circle-check"></i> Primera calidad
+          </p>
+        </div>
+        <div class="columna">
+          <img src="" alt="" />
+        </div>
+      </section>
+      <!-- CONTACTO -->
+      <section id="contacto" class="contacto">
+        <h3>Hace tu pedido</h3>
+
+        <!--Aca metemos el formulario -->
+
+        <!-- ESTE BOTON LO PODEMOS DEJAR POR SI SE NOS OCURRE HACER 4 PESTAÑAS, EN VEZ DE 4 SECCIONES, Y QUE NOS REDIRECCIONE AL FORMULARIO
+          <div><button>ACÁ</button></div>
+        -->
+      </section>
+      <!-- FOOTER -->
+    </main>
+    <footer>
+      <a href="#arriba" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+      <h5>©TpMenu</h5>
+    </footer>
+  </body>
+</html>
