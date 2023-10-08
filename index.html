@@ -26,12 +26,16 @@
         <img src="imgs/logo.png" alt="" />
         <h2>MENU</h2>
       </div>
-      <nav>
-        <a href="#inicio" onclick="seleccionar()">Quiénes Somos</a>
-        <a href="#menu" onclick="seleccionar()">Menu</a>
-        <a href="#sucursales" onclick="seleccionar()">Sucursales</a>
-        <a href="#contacto" onclick="seleccionar()">Contacto</a>
+      <div class="Container">
+      <nav> 
+        <ul>
+        <li><a href="#inicio" onclick="seleccionar()">Quiénes Somos</a></li>
+        <li><a href="#menu" onclick="seleccionar()">Menu</a></li>
+        <li><a href="#sucursales" onclick="seleccionar()">Sucursales</a></li>
+        <li><a href="#contacto" onclick="seleccionar()">Contacto</a></li>
+        </ul>
       </nav>
+    </div>
     </header>
 
     <main>
@@ -79,7 +83,7 @@
           </article>
           <article class="cards">
               <figure>
-                  <img src="imgs/pizzita.jpg" alt="pizzita en 1er plano">
+                  <img src="imgs/pizza.jpg" alt="pizzita en 1er plano">
                   <figcaption>
                       <h3> Pizza</h3>
                   </figcaption>
@@ -94,16 +98,16 @@
             </figure>
         </article>
       </div>
-      
+    
           <div class="caja-padre">
             <div class="caja-hija">
-              <img src="imgs/logo.png"  alt="" />
-              <h2>Pizzas</h2>
+              <img src="imgs/pizza.jpg"  alt="" />
+              <h2>PIZZAS</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nostrum, animi aliquid ipsam maxime eveniet ut ullam neque,
-                vitae odit nemo beatae sed a labore sunt quae, repellendus quam.
-                Assumenda, temporibus!
+                Nuestras pizzas son el resultado de años de perfeccionamiento
+                y pasión por la cocina. Cada masa se amasa a mano y se hornea a 
+                la perfección en nuestro horno de leña, logrando esa textura 
+                crujiente y sabor inigualable que solo una pizza auténtica puede tener.
               </p>
               <button class="button">
                 <ion-icon name="pizza-outline"></ion-icon>
@@ -111,13 +115,13 @@
             </div>
 
             <div class="caja-hija">
-              <img src="imgs/logo.png" class="img" alt="" />
-              <h2>Bebidas</h2>
+              <img src="imgs/bebidas.jpg" class="img" alt="" />
+              <h2>BEBIDAS</h2>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Officia, molestiae qui sed quia reprehenderit corrupti pariatur
-                error laboriosam repellat odit, dolorum iste nulla soluta
-                quaerat, aut suscipit eos dolorem neque!
+                Desde cócteles artesanales que despiertan tus 
+                sentidos hasta una amplia variedad de vinos y
+                 cervezas que te transportan a diferentes rincones del
+                  mundo, nuestra carta de bebidas ha sido diseñada con pasión y dedicación.
               </p>
               <button class="button">
                 <ion-icon name="beer-outline"></ion-icon>
@@ -125,13 +129,15 @@
             </div>
 
             <div class="caja-hija">
-              <img src="imgs/logo.png" class="img" alt="" />
-              <h2>Combos</h2>
+              <img src="imgs/combos.jpg" class="img" alt="" />
+              <h2>COMBOS</h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Architecto, ipsa animi voluptatem dolores molestiae itaque!
-                Eveniet dolores eum veniam vel odio hic perferendis, inventore
-                dolore cumque ut voluptate minima nihil?
+                Desde los amantes de la carne hasta los 
+                fanáticos de la comida vegetariana, nuestros 
+                combos son versátiles y deliciosos. Cada uno de ellos 
+                presenta una armoniosa combinación de platos principales, 
+                acompañamientos y bebidas, todo a un precio especial 
+                que hará que te sientas como un invitado especial en nuestra casa.
               </p>
               <button class="button">
                 <ion-icon name="fast-food-outline"></ion-icon>
@@ -140,6 +146,8 @@
             </div>
           </div>
       </section>
+
+
       <!-- CARACTERISTICAS -->
       <section id="sucursales" class="caracteristicas">
         <div class="columna">
