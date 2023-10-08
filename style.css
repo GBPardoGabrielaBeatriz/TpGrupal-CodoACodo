@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -179,7 +181,7 @@ transform: scale(1.15);
   height: 70%;
   max-width: 1200px;
   margin: 20px auto;
-  background-color:/* #D9A796*/#F72D57 ;
+  background-color:#F72D57;
   border: 2px solid/* #BF2011*/;
   display: flex;
   padding: 20px;
@@ -216,15 +218,61 @@ transform: scale(1.15);
   color: #F2BC57;
   padding: 0;
 }
-.card .caja-padre .caja-hija .boton {
-  background-color: #F72D57;
-  color: whitesmoke;
-  padding: 10px;
-  text-align: center;
-  margin-top: 10px;
-  border-radius: 8px;
-  font-size: 150%;
-}
+.card .caja-padre .caja-hija .button {
+  --color:#F72D57 ;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var whitesmoke;
+  z-index: 1;
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color:whitesmoke;
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+ 
+
 
 /* Sucursales */
 .caracteristicas {
