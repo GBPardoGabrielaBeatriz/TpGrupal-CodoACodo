@@ -22,6 +22,8 @@ header {
   position: fixed;
   width: 100%;
 }
+
+
 .container{
   display: flex;
   align-items: center;
@@ -39,10 +41,10 @@ nav ul li{
   align-items: center;
 }
 .logo img {
-  height: 50px;
+  height: 100px;
   margin: 10px;
   padding: 0 10px 0 10px;
-  border-radius: 55%;
+  border-radius: 5%;
 }
 .logo h2 {
   color:  white;
@@ -110,6 +112,7 @@ nav a:hover {
   background-color: var(--background);
   gap:16px;
   justify-content: center;
+  height: 80vh;
 }
 .cards{
   position: relative;
@@ -168,7 +171,7 @@ transform: scale(1.15);
   margin-bottom: 30px;
 }
 .quienessomos span {
-  color:#D92211 ;
+  color:#F72D57 ;
  /* background-color: #D9A796 ;*/
 }
 .quienessomos img{
@@ -182,17 +185,22 @@ transform: scale(1.15);
 /* menu */
 .card h3 {
   font-size: 30px;
-  text-transform: uppercase;
   text-align: center;
   margin: 50px 50px 5px 50px;
   color:#F72D57;
 
 }
+.tarjetas h3 {
+  font-size: 30px;
+  text-align: center;
+  margin: 50px 50px 5px 50px;
+  color: #F72D57;
+}
 
 .card .caja-padre {
   width: 90%;
-  height: 10%;
-  max-width: 1200px;
+  height: 5%;
+  /*max-width: 1200px;*/
   margin: 5px auto;
   background-color:#F72D57;
   border: 1px solid #BF2011;
@@ -202,10 +210,11 @@ transform: scale(1.15);
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: space-between;
+
 }
 .card .caja-hija img {
   width: 100%;
-  height: 40%;
+  height: 58%;
   overflow: hidden;
   object-fit: cover;
   border-radius: 5px;
@@ -295,7 +304,7 @@ transform: scale(1.15);
   filter: brightness(.8);
  }
  
-*/
+
 
 /* Sucursales */
 .caracteristicas {
@@ -323,7 +332,6 @@ transform: scale(1.15);
 .contacto {
   background-color:#F2BC57;
   height: 100vh;
-  color: whitesmoke;
   margin-top: 50px;
   font-size: 50px;
   text-align: center;
@@ -332,6 +340,9 @@ transform: scale(1.15);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.contacto h3{
+  color: white;
 }
 .contacto button{
   border-radius: 8px;
@@ -371,3 +382,4 @@ footer .arriba{
   border-radius: 50%;
   line-height: 50px;
 }
+
