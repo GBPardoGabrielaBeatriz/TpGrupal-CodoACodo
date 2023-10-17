@@ -1,10 +1,21 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  --primary-color: #F2BC57;
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
 }
 html{ 
   scroll-behavior: smooth; 
@@ -304,6 +315,92 @@ transform: scale(1.15);
   filter: brightness(.8);
  }
  
+ /* Categorías */
+
+ .top-categories {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.container-categories {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+}
+
+.card-category {
+	height: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2rem;
+	gap: 2rem;
+}
+
+.category-combos {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('imgs/combos.jpg');
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.category-pizza {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('imgs/pizza.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.category-after {
+	background-image: linear-gradient(#00000080, #00000080),
+		url(imgs/bebidas.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.card-category p {
+	font-size: 2.5rem;
+	color: #fff;
+	text-transform: capitalize;
+	position: relative;
+}
+
+.card-category p::after {
+	content: '';
+	width: 2.5rem;
+	height: 2px;
+  background-color:#F2BC57;
+	
+	position: absolute;
+	bottom: -1rem;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+.card-category span {
+	font-size: 1.6rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+.card-category span:hover {
+	color: var(--primary-color);
+}
+
+
+
+
+
+
+
+/* Categorías*/
+
 
 
 /* Sucursales */
