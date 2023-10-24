@@ -1,30 +1,40 @@
-document.getElementById('reservationForm').addEventListener('submit', function(event) {
+document.getElementById('reservationForm').addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    // Obtener valores del formulario
-    let fullName = document.getElementById('fullName').value.trim();
-    let email = document.getElementById('email').value.trim();
-    let phone = document.getElementById('phone').value.trim();
-    let date = document.getElementById('date').value;
-    let people = document.getElementById('people').value;
-    let message = document.getElementById('message').value.trim();
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const date = document.getElementById('date').value;
+    const people = document.getElementById('people').value;
+    const message = document.getElementById('message').value.trim();
 
     if (validateForm(fullName, email, phone, date, people, message)) {
-        alert('Reserva realizada con éxito');
+        const formData = new FormData(event.target);
+        const response = await fetch(event.target.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            alert('Reserva realizada con éxito');
+            event.target.reset();  
+        } else {
+            alert('Hubo un error al enviar el formulario.');
+        }
     } else {
         alert('Por favor, completa todos los campos correctamente.');
     }
-});
-
-
-    // Imprimimos los valores en consola
+    // Imprimir los valores en consola
     console.log("Nombre y Apellido:", fullName);
     console.log("Correo Electrónico:", email);
     console.log("Número de Teléfono:", phone);
     console.log("Fecha de Reserva:", date);
     console.log("Cantidad de Comensales:", people);
     console.log("Restricciones alimenticias:", message);
-
+});
 
 function validateForm(fullName, email, phone, date, people, message) {
     if (!fullName || !email || !phone || !date || !people) {

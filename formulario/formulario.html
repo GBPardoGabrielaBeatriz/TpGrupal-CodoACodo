@@ -12,21 +12,21 @@
     
     <h1>Formulario de reserva</h1>
 
-    <form id="reservationForm">
+    <form id="reservationForm" action="https://formspree.io/f/xbjvqdvr" method="POST">
         <label for="fullName">Nombre y Apellido:</label>
-        <input type="text" id="fullName" name="fullName" required><br><br>
+        <input type="text" id="fullName" name="fullName" ><br><br>
 
         <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" ><br><br>
 
         <label for="phone">Número de teléfono:</label>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" ><br><br>
+        <input type="tel" id="phone" name="phone"><br><br>
 
         <label for="date">Fecha de reserva:</label>
-        <input type="date" id="date" name="date" required><br><br>
+        <input type="date" id="date" name="date" ><br><br>
 
         <label for="people">Cantidad de comensales:</label>
-        <select id="people" name="people" required>
+        <select id="people" name="people" >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -39,7 +39,7 @@
         <br>
         <textarea id="message" name="message" cols="30" rows="10"></textarea><br><br>
 
-        <input type="submit" value="Reservar">
+        <button type="submit" class="btn btn-primary">Reservar</button>
     </form>
     <script src="formulario.js"></script>
 
