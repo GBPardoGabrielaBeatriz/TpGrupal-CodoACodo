@@ -25,17 +25,26 @@ html{
 
 /* HEADER */
 header {
-  display: flex;
+  /*display: flex;
   min-height: 70px;
   background-color:#F2BC57;
   justify-content: space-between;
   align-items: center;
   padding: 0;
   position: fixed;
+  width: 100%;*/
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  background: #f2bc57;
 }
 
-
+/*  
 .container{
   display: flex;
   align-items: center;
@@ -68,7 +77,7 @@ nav{
 }
 nav a {
   padding: 10px 10px;
-  color: /*#D92211*/white;
+  color: /*#D92211*//*white;
   text-decoration: none;
 }
 nav a:hover {
@@ -80,16 +89,126 @@ nav a:hover {
   }
 
 }
+*/
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2bc57;
+  z-index: -1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 100px;
+}
+.logo h2 {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: black;
+}
+
+.navbar a {
+  font-size: 1.15rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+#check {
+  display: none;
+}
+
+.icons {
+  position: relative;
+  right: 5%;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/*BREAKPOINTS*/
+@media (max-width: 992px) {
+  .header {
+    padding: 1.3rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .icons {
+    display: inline-flex;
+  }
+  #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+  .icons #close-icon {
+    display: none;
+  }
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.95);
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  #check:checked ~ .navbar {
+    height: 17.7rem;
+  }
+  .navbar a {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    transition: 0.3s ease;
+  }
+  #check:checked ~ .navbar a {
+    transform: translateY(0);
+  }
+}
+
+
 
 /* BANNER */
 .banner {
-  background-image: url(imgs/fondo.jpg);
+  /* background-image: url(imgs/fondo.jpg);
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
+  width: 100%;
+  height: 100vh;
+  background-image: url(imgs/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+ /* 
 .banner h3{
   background-color: #F72D57;
   color:black ;
@@ -116,9 +235,89 @@ nav a:hover {
   transition: 0.3s;
 }
 
+*/
+.banner-text {
+  padding: 150px 50px;
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+}
+
+.banner-text h1 {
+  text-shadow: 2px 2px black;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.banner-text h2 {
+  text-shadow: 2px 2px black;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.banner-text span {
+  color: #f2bc57;
+}
+
+.button1 {
+  margin-right: 40px;
+  padding: 10px 30px;
+  background-color: #f2bc57;
+  color: white;
+  border-radius: 5px;
+}
+
+.button1:hover {
+  background-color: white;
+  color: #f2bc57;
+  transition: 0.5s;
+}
+
+.button2 {
+  margin-right: 40px;
+  padding: 10px 30px;
+  background-color: white;
+  color: #f2bc57;
+  transition: 0.5s;
+}
+
+.button2:hover {
+  background-color: #f2bc57;
+  color: white;
+  transition: 0.5s;
+}
+
 
 
 /* QUIENES SOMOS */
+.quienessomos {
+  padding: 25px;
+  margin: 25px;
+  display: flex;
+  flex-direction: row;
+  font-size: 26px;
+  text-align: center;
+  align-items: center;
+}
+.quienessomos h3 {
+  margin-bottom: 30px;
+}
+.quienessomos span {
+  color: #f72d57;
+  /* background-color: #D9A796 ;*/
+}
+.quienessomos img {
+  height: 500px;
+  border-radius: 25% 75% 47% 53% / 28% 44% 56% 72%;
+}
+.caja {
+  margin-left: 0px;
+}
+
+
+
+
+/*
 .galeria{
   display: flex;
   background-color: var(--background);
@@ -185,8 +384,8 @@ transform: scale(1.15);
 }
 .quienessomos span {
   color:#F72D57 ;
- /* background-color: #D9A796 ;*/
-}
+ /* background-color: #D9A796 ;
+}/*
 .quienessomos img{
   height: 500px;
   border-radius: 25% 75% 47% 53% / 28% 44% 56% 72% ;
@@ -194,15 +393,21 @@ transform: scale(1.15);
 .caja {
   margin-left: 50px;
 }
-
+*/
 
 /* Galeria de fotos */
-.gallery {
+.gallery {/* 
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 30rem);
 	gap: 1.5rem;
-	margin-bottom: 3rem;
+	margin-bottom: 3rem;*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 30rem);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+
 }
 
 .gallery img {
@@ -217,18 +422,62 @@ transform: scale(1.15);
 }
 
 /* Galeria de fotos */
-
-
-
-
 /* menu */
+.card {
+  background-color: black;
+  box-sizing: border-box;
+}
+
 .card h3 {
-  font-size: 30px;
+ /* font-size: 30px;
   text-align: center;
   margin: 50px 50px 5px 50px;
-  color:#F72D57;
+  color:#F72D57;*/
+  font-size: 26px;
+  text-align: center;
+  margin: 20px;
+  color: white;
 
 }
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeria figure {
+  width: 200px; /* Establecer un ancho fijo para las figuras */
+  height: 200px; /* Establecer una altura fija para las figuras */
+  margin: 10px; /* Agregar margen entre las figuras */
+}
+
+.galeria figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajustar el contenido de la imagen al tamaño de la figura */
+}
+
+.galeria figure .capa {
+  opacity: 1;
+  visibility: visible;
+  text-align: center;
+  height: 100%;
+  transition: none;
+  margin-top: 0;
+}
+
+.galeria figure:hover > .capa h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.galeria figure .capa h3 {
+  font-size: 24px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+/*
 .tarjetas h3 {
   font-size: 30px;
   text-align: center;
@@ -239,7 +488,7 @@ transform: scale(1.15);
 .card .caja-padre {
   width: 90%;
   height: 5%;
-  /*max-width: 1200px;*/
+  /*max-width: 1200px;
   margin: 5px auto;
   background-color:#F72D57;
   border: 1px solid #BF2011;
@@ -343,7 +592,7 @@ transform: scale(1.15);
  .button:active {
   filter: brightness(.8);
  }
- 
+ */ 
  /* Especiales de la casa */
 
  .top-categories {
@@ -351,6 +600,7 @@ transform: scale(1.15);
 	flex-direction: column;
 	gap: 2rem;
 	margin-bottom: 3rem;
+  margin-top: 150px;
 }
 
 .container-categories {
@@ -423,24 +673,19 @@ transform: scale(1.15);
 	color: var(--primary-color);
 }
 
-/* Especiales de la casa*/
 
 
-/*  Imágenes */
-
-
-/*  Imágenes*/
-
-
-/* Sucursales */
+ /*Sucursales */
 .caracteristicas {
-  margin: 100px;
-  padding: 160px 0 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+    margin: 100px;
+    padding: 160px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
 }
+/*
 .caracteristicas .columna p {
   margin: 20px;
   justify-items: center;
@@ -451,8 +696,28 @@ transform: scale(1.15);
   transition: 400ms;
   box-shadow: 10px 10px 30px 15px #c2c7bf;
 }
+*/
+.columna {
+  margin-bottom: 0; /* Sin espacio entre columnas en pantallas grandes */
+  flex: 1; /* Igual ancho para ambas columnas */
+}
 
+.caracteristicas .columna img {
+  width: 400px;
+  border-radius: 10px;
+  transition: 400ms;
+  box-shadow: 10px 10px 30px 15px #c2c7bf;
+}
 
+.map-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.map-container iframe {
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
 
 /* CONTACTO */
 .contacto {
@@ -508,4 +773,23 @@ footer .arriba{
   border-radius: 50%;
   line-height: 50px;
 }
+@media screen and (max-width: 767px) {
+  .quienessomos img {
+    max-height: 200px;
+    max-width: 100%;
+  }
 
+  .card h3 {
+    font-size: 22px;
+    text-align: center;
+    margin: 20px;
+    color: white;
+  }
+
+  .galeria figure {
+    width: 50%;
+    height: 50%;
+    height: auto;
+    margin: 10px 0;
+  }
+}
