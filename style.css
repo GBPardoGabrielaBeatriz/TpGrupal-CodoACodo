@@ -1,27 +1,27 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  --primary-color: #F2BC57;
-	--background-color: #f9f5f0;
-	--dark-color: #151515;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  --primary-color: #f2bc57;
+  --background-color: #f9f5f0;
+  --dark-color: #151515;
 }
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{ 
-  scroll-behavior: smooth; 
+html {
+  scroll-behavior: smooth;
 }
 
+main {
+  background-color: #151515;
+}
 
 /* HEADER */
 header {
@@ -77,7 +77,7 @@ nav{
 }
 nav a {
   padding: 10px 10px;
-  color: /*#D92211*//*white;
+  color: /*#D92211*/ /*white;
   text-decoration: none;
 }
 nav a:hover {
@@ -191,8 +191,6 @@ nav a:hover {
   }
 }
 
-
-
 /* BANNER */
 .banner {
   /* background-image: url(imgs/fondo.jpg);
@@ -202,13 +200,13 @@ nav a:hover {
   justify-content: center;
   align-items: center;*/
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background-image: url(imgs/fondo2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
- /* 
+/* 
 .banner h3{
   background-color: #F72D57;
   color:black ;
@@ -287,10 +285,9 @@ nav a:hover {
   transition: 0.5s;
 }
 
-
-
 /* QUIENES SOMOS */
-.quienessomos {
+
+/*.quienessomos {
   padding: 25px;
   margin: 25px;
   display: flex;
@@ -305,17 +302,40 @@ nav a:hover {
 .quienessomos span {
   color: #f72d57;
   /* background-color: #D9A796 ;*/
-}
-.quienessomos img {
+
+/*.quienessomos img {
   height: 500px;
   border-radius: 25% 75% 47% 53% / 28% 44% 56% 72%;
 }
 .caja {
   margin-left: 0px;
+} */
+
+.quienessomos {
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
+.quienessomos h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
 
+.quienessomos img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  max-height: 300px;
+}
 
+.caja {
+  margin-left: 50px;
+}
 
 /*
 .galeria{
@@ -396,7 +416,8 @@ transform: scale(1.15);
 */
 
 /* Galeria de fotos */
-.gallery {/* 
+.gallery {
+  /* 
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 30rem);
@@ -407,29 +428,27 @@ transform: scale(1.15);
   grid-template-rows: repeat(2, 30rem);
   gap: 1.5rem;
   margin-bottom: 3rem;
-
 }
 
 .gallery img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-img-3 {
-	grid-column: 2/4;
-	grid-row: 1/3;
+  grid-column: 2/4;
+  grid-row: 1/3;
 }
 
 /* Galeria de fotos */
 /* menu */
 .card {
-  background-color: black;
   box-sizing: border-box;
 }
 
 .card h3 {
- /* font-size: 30px;
+  /* font-size: 30px;
   text-align: center;
   margin: 50px 50px 5px 50px;
   color:#F72D57;*/
@@ -437,7 +456,6 @@ transform: scale(1.15);
   text-align: center;
   margin: 20px;
   color: white;
-
 }
 .galeria {
   display: flex;
@@ -446,15 +464,15 @@ transform: scale(1.15);
 }
 
 .galeria figure {
-  width: 200px; /* Establecer un ancho fijo para las figuras */
-  height: 200px; /* Establecer una altura fija para las figuras */
-  margin: 10px; /* Agregar margen entre las figuras */
+  width: 200px;
+  height: 200px;
+  margin: 10px;
 }
 
 .galeria figure img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajustar el contenido de la imagen al tamaño de la figura */
+  object-fit: cover;
 }
 
 .galeria figure .capa {
@@ -592,98 +610,95 @@ transform: scale(1.15);
  .button:active {
   filter: brightness(.8);
  }
- */ 
- /* Especiales de la casa */
+ */
+/* Especiales de la casa */
 
- .top-categories {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	margin-bottom: 3rem;
+.heading-1 {
+  color: white;
+}
+
+.top-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
   margin-top: 150px;
 }
 
 .container-categories {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
 }
 
 .card-category {
-	height: 20rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 2rem;
-	gap: 2rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  gap: 2rem;
 }
 
 .category-combos {
-	background-image: linear-gradient(#00000080, #00000080),
-		url('imgs/combos.jpg');
-	background-size: cover;
-	background-position: bottom;
-	background-repeat: no-repeat;
- 
+  background-image: linear-gradient(#00000080, #00000080),
+    url("imgs/combos.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .category-pizza {
-	background-image: linear-gradient(#00000080, #00000080),
-		url('imgs/pizza.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  background-image: linear-gradient(#00000080, #00000080), url("imgs/pizza.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .category-after {
-	background-image: linear-gradient(#00000080, #00000080),
-		url(imgs/bebidas.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  background-image: linear-gradient(#00000080, #00000080), url(imgs/bebidas.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card-category p {
-	font-size: 2.5rem;
-	color: #fff;
-	text-transform: capitalize;
-	position: relative;
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: capitalize;
+  position: relative;
 }
 
 .card-category p::after {
-	content: '';
-	width: 2.5rem;
-	height: 2px;
-  background-color:#F2BC57;
-	position: absolute;
-	bottom: -1rem;
-	left: 50%;
-	transform: translate(-50%, 50%);
+  content: "";
+  width: 2.5rem;
+  height: 2px;
+  background-color: #f2bc57;
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 .card-category span {
-	font-size: 1.6rem;
-	color: #fff;
-	cursor: pointer;
- 
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
 }
 
 .card-category span:hover {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
 
-
-
- /*Sucursales */
+/*Sucursales */
 .caracteristicas {
-    margin: 100px;
-    padding: 160px 0 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
 }
 /*
 .caracteristicas .columna p {
@@ -698,8 +713,8 @@ transform: scale(1.15);
 }
 */
 .columna {
-  margin-bottom: 0; /* Sin espacio entre columnas en pantallas grandes */
-  flex: 1; /* Igual ancho para ambas columnas */
+  margin-bottom: 0;
+  flex: 1;
 }
 
 .caracteristicas .columna img {
@@ -721,7 +736,7 @@ transform: scale(1.15);
 
 /* CONTACTO */
 .contacto {
-  background-color:#F2BC57;
+  background-color: #f2bc57;
   height: 100vh;
   margin-top: 50px;
   font-size: 50px;
@@ -732,14 +747,14 @@ transform: scale(1.15);
   justify-content: center;
   align-items: center;
 }
-.contacto h3{
+.contacto h3 {
   color: white;
 }
-.contacto button{
+.contacto button {
   border-radius: 8px;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   color: white;
-  border: 2px solid #1D1D1D;
+  border: 2px solid #1d1d1d;
   font-size: 30px;
   cursor: pointer;
   margin: 10px;
@@ -753,18 +768,18 @@ transform: scale(1.15);
 }
 */
 /* FOOTER */
-footer{
+footer {
   color: gray;
   padding: 50px 0 30px 0;
   text-align: center;
   position: relative;
   width: 100%;
 }
-footer .arriba{
+footer .arriba {
   display: block;
   width: 50px;
-  height: 50px ;
-  background-color:#1D1D1D;
+  height: 50px;
+  background-color: #1d1d1d;
   color: whitesmoke;
   position: absolute;
   left: 50%;
