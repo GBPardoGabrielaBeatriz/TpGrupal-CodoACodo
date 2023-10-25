@@ -807,4 +807,17 @@ footer .arriba {
     height: auto;
     margin: 10px 0;
   }
+
+  .caracteristicas {
+    display: block;
+  }
+
+  .columna {
+    margin-top: 40px;
+  }
+
+  .galeria figure img {
+    width: 50%;
+    height: 50%;
+  }
 }
