@@ -8,8 +8,12 @@ document.getElementById('reservationForm').addEventListener('submit', async func
     const people = document.getElementById('people').value;
     const message = document.getElementById('message').value.trim();
 
-    if (validateForm(fullName, email, phone, date, people, message)) {
+    let sucursalSelected = document.querySelector('input[name="sucursal"]:checked');
+    const sucursal = sucursalSelected ? sucursalSelected.value : null;
+
+    if (validateForm(fullName, email, phone, date, people, message, sucursal)) {
         const formData = new FormData(event.target);
+
         const response = await fetch(event.target.action, {
             method: 'POST',
             body: formData,
@@ -27,17 +31,19 @@ document.getElementById('reservationForm').addEventListener('submit', async func
     } else {
         alert('Por favor, completa todos los campos correctamente.');
     }
+
     // Imprimir los valores en consola
     console.log("Nombre y Apellido:", fullName);
     console.log("Correo Electrónico:", email);
     console.log("Número de Teléfono:", phone);
     console.log("Fecha de Reserva:", date);
     console.log("Cantidad de Comensales:", people);
+    console.log("Sucursal:", sucursal);
     console.log("Restricciones alimenticias:", message);
 });
 
-function validateForm(fullName, email, phone, date, people, message) {
-    if (!fullName || !email || !phone || !date || !people) {
+function validateForm(fullName, email, phone, date, people, message, sucursal) {
+    if (!fullName || !email || !phone || !date || !people || !sucursal) {
         return false;
     }
 
