@@ -729,16 +729,16 @@ transform: scale(1.15);
 }
 
 .contacto h3 {
-  color: #444;
+  color: #151515;
   margin-bottom: 20px;
   font-size: 28px;
 }
 
 .contacto button {
   border-radius: 8px;
-  background-color: #1d1d1d;
+  background-color: #151515;
   color: white;
-  border: 2px solid #1d1d1d;
+  border: 2px solid #151515;
   font-size: 20px;
   cursor: pointer;
   margin: 10px;
@@ -755,23 +755,23 @@ transform: scale(1.15);
 
 .campo {
   margin-bottom: 15px;
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   gap: 10px;
 }
 
 .campo label {
-  flex: 0 0 150px; 
-  margin-bottom: 0; 
+  flex: 0 0 150px;
+  margin-bottom: 0;
   font-weight: bold;
-  color: #444;
-  text-align: right; 
+  color: #151515;
+  text-align: right;
   white-space: nowrap;
 }
 
-.campo input[type="radio"] + label { 
-  font-size: 18px; 
-  text-align: left; 
+.campo input[type="radio"] + label {
+  font-size: 18px;
+  text-align: left;
 }
 
 .campo input,
@@ -790,9 +790,8 @@ transform: scale(1.15);
   align-items: center;
 }
 
-
 .campo button {
-  background-color: #555; 
+  background-color: #555;
   color: #fffffff5;
   padding: 10px 20px;
   border: none;
