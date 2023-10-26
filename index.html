@@ -70,7 +70,7 @@
           <h1>Pedí tu <span>menú</span></h1>
           <div>
             <a href="#" class="button1">MENÚ</a>
-            <a href="#" class="button2">PEDÍ AHORA</a>
+            <a href="#" class="button2">REALIZÁ TU RESERVA</a>
           </div>
         </div>
       </section>
@@ -308,14 +308,60 @@
       </section>
       <!-- CONTACTO -->
       <section id="contacto" class="contacto">
-        <h3>Hace tu pedido</h3>
-
+        <h3>Realizá tu reserva</h3>
+    
         <!--Aca metemos el formulario -->
-
-        <!-- ESTE BOTON LO PODEMOS DEJAR POR SI SE NOS OCURRE HACER 4 PESTAÑAS, EN VEZ DE 4 SECCIONES, Y QUE NOS REDIRECCIONE AL FORMULARIO
-          <div><button>ACÁ</button></div>
-        -->
-      </section>
+        <form id="reservationForm" action="https://formspree.io/f/xbjvqdvr" method="POST" class="reservation-form">
+            <div class="campo">
+                <label for="fullName">Nombre y Apellido:</label>
+                <input type="text" id="fullName" name="fullName">
+            </div>
+    
+            <div class="campo">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email">
+            </div>
+    
+            <div class="campo">
+                <label for="phone">Número de teléfono:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+    
+            <div class="campo radio-field">
+                <label>Elija una sucursal:</label>
+                <div>
+                    <input type="radio" id="villaUrquiza" name="sucursal" value="Villa Urquiza">
+                    <label for="villaUrquiza">Villa Urquiza</label>
+                    <input type="radio" id="belgrano" name="sucursal" value="Belgrano">
+                    <label for="belgrano">Belgrano</label>
+                </div>
+            </div>
+    
+            <div class="campo">
+                <label for="date">Fecha de reserva:</label>
+                <input type="date" id="date" name="date">
+            </div>
+    
+            <div class="campo">
+                <label for="people">Cantidad de comensales:</label>
+                <select id="people" name="people">
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="1">5</option>
+                    <option value="1">6 o más</option>
+                </select>
+            </div>
+    
+            <div class="campo">
+              <label for="message">Restricciones alimenticias:</label>
+              <textarea id="message" name="message" cols="30" rows="10"></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-primary">Reservar</button>
+        </form>
+    </section>
       <!-- FOOTER -->
     </main>
     <footer>
@@ -324,6 +370,8 @@
       </a>
       <h5>©CodoaCodo2023</h5>
     </footer>
+
+    <script src="formulario.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
