@@ -820,4 +820,12 @@ footer .arriba {
     width: 50%;
     height: 50%;
   }
+
+  .container-categories {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-category {
+    gap: 1rem;
+  }
 }
