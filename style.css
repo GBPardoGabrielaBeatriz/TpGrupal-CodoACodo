@@ -445,6 +445,8 @@ transform: scale(1.15);
 /* menu */
 .card {
   box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card h3 {
@@ -472,29 +474,8 @@ transform: scale(1.15);
 .galeria figure img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
-.galeria figure .capa {
-  opacity: 1;
-  visibility: visible;
-  text-align: center;
-  height: 100%;
-  transition: none;
-  margin-top: 0;
-}
-
-.galeria figure:hover > .capa h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.galeria figure .capa h3 {
-  font-size: 24px;
-  text-decoration: none;
-  margin-bottom: 20px;
-  margin-top: 0;
-}
 /*
 .tarjetas h3 {
   font-size: 30px;
@@ -794,18 +775,20 @@ footer .arriba {
     max-width: 100%;
   }
 
+  .galeria figure {
+    display: block;
+    margin-top: 60px;
+  }
+
+  .galeria figure img {
+    display: block;
+  }
+
   .card h3 {
     font-size: 22px;
     text-align: center;
     margin: 20px;
     color: white;
-  }
-
-  .galeria figure {
-    width: 50%;
-    height: 50%;
-    height: auto;
-    margin: 10px 0;
   }
 
   .caracteristicas {
@@ -814,11 +797,6 @@ footer .arriba {
 
   .columna {
     margin-top: 40px;
-  }
-
-  .galeria figure img {
-    width: 50%;
-    height: 50%;
   }
 
   .container-categories {
