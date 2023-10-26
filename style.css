@@ -33,7 +33,7 @@ header {
   padding: 0;
   position: fixed;
   width: 100%;*/
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -236,7 +236,7 @@ nav a:hover {
 */
 .banner-text {
   padding: 150px 50px;
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   text-align: center;
   color: white;
 }
