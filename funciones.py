@@ -150,7 +150,7 @@ def modificar_reserva(codigo, nuevo_cliente, nuevo_plato, nueva_bebida,  nueva_c
     return False
 
 #LISTAR
-def listar_productos():
+def listar_bebidas():
     print("-" * 50)
     for bebida in bebidas:
         print(f"Código.....: {bebida['codigo']}")
