@@ -19,7 +19,29 @@ class Catalogo:
             proveedor INT(2))''')
         
         self.conn.commit()
+       
+#----------------------------------------------------------
+#Programa Principal
+#----------------------------------------------------------
+    def agregar_bebida(self, nombre, precio, tipo, proveedor, descripcion, cantidad, codigo):
+#-----------------------Verificar si el producto ya existe -----------------------------------
+            self.cursor.execute(f"SELECT * FROM bebidas WHERE codigo = {codigo}")
+            bebida_existe = self.cursor.fetchone()
+            if bebida_existe:
+               return False
+#-----------------------Cuandpo el producto no existe -------------------------------            
+            sql = f"INSERT INTO bebida \
+                (codigo,nombre, descripcion, cantidad, precio, tipo, proveedor) 
+            VALUES \ ({codigo}, '{descripcion}', {cantidad}, {precio},'{nombre}', {tipo},'{proveedor}')"
+            self.cursor.execute(sql)
+            self.conn.commit()
+            return True
 #----------------------------------------------------------
 #Programa Principal
 #----------------------------------------------------------
 catalogo = Catalogo(host='localhost', user='root', password='',database='TpFinalCodoACodo')
+#----------------------------------------------------------
+#Agregamos Bebidas
+catalogo.agregar_bebida(1,'Agua mineral.', 100, 'Bebida sin alcohol 600cc',1000,'Pepsico')
+catalogo.agregar_bebida(2,'Gaseosa.', 6000, 'Bebida sin alcohol 3L',2500, 'Pepsico')
+catalogo.agregar_bebida(3,'Soda.', 50, 'Bebida sin alcohol 450cc',750, 'Pepsico')
