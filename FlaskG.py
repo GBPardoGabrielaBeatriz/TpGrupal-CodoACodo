@@ -69,6 +69,8 @@ class CatalogoPlatos:
              else:
                 print("Plato no encontrado.")
 
+                
+
 class CatalogoBebidas:
 
      def __init__(self, host, user, password, database):
@@ -251,6 +253,27 @@ class CatalogoReservas:
                 print(f"Turno.....: {reserva['turno']}")
              else:
                 print("Reserva no encontrada.")
+
+     def agregar_reserva(self, datos_reserva):
+        self.cursor.execute("""
+            INSERT INTO reservas (id_cliente, id_plato, id_bebida, cantidad_personas, fecha, hora, turno)
+            VALUES (%(id_cliente)s, %(id_plato)s, %(id_bebida)s, %(cantidad_personas)s, %(fecha)s, %(hora)s, %(turno)s)
+        """, datos_reserva)
+        self.conn.commit()
+        return self.cursor.lastrowid
+
+     def modificar_reserva(self, id, nuevos_datos):
+        self.cursor.execute("""
+            UPDATE reservas
+            SET id_cliente=%(id_cliente)s, id_plato=%(id_plato)s, id_bebida=%(id_bebida)s,
+                cantidad_personas=%(cantidad_personas)s, fecha=%(fecha)s, hora=%(hora)s, turno=%(turno)s
+            WHERE id=%(id)s
+        """, {'id': id, **nuevos_datos})
+        self.conn.commit()
+
+     def eliminar_reserva(self, id):
+        self.cursor.execute("DELETE FROM reservas WHERE id=%s", (id,))
+        self.conn.commit()                
    
 '''''
 #--------------------------------------------------------------------
@@ -335,6 +358,23 @@ def mostrar_reserva(id):
        return jsonify(reserva)
     else:
         return "Reserva no encontrada", 404
+
+@app.route("/reservas", methods=["POST"])
+def agregar_reserva():
+    datos_reserva = request.json
+    nuevo_id = reservas.agregar_reserva(datos_reserva)
+    return jsonify({"id": nuevo_id}), 201
+
+@app.route("/reservas/<int:id>", methods=["PUT"])
+def modificar_reserva(id):
+    nuevos_datos = request.json
+    reservas.modificar_reserva(id, nuevos_datos)
+    return jsonify({"mensaje": "Reserva modificada correctamente"}), 200
+
+@app.route("/reservas/<int:id>", methods=["DELETE"])
+def eliminar_reserva(id):
+    reservas.eliminar_reserva(id)
+    return jsonify({"mensaje": "Reserva eliminada correctamente"}), 200        
 
 if __name__ == "__main__":
   app.run(debug=True)
