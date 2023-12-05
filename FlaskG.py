@@ -254,7 +254,7 @@ class CatalogoReservas:
              else:
                 print("Reserva no encontrada.")
 
-def agregar_reserva(self, datos_reserva):
+     def agregar_reserva(self, datos_reserva):
         self.cursor.execute("""
             INSERT INTO reservas (id_cliente, id_plato, id_bebida, cantidad_personas, fecha, hora, turno)
             VALUES (%(id_cliente)s, %(id_plato)s, %(id_bebida)s, %(cantidad_personas)s, %(fecha)s, %(hora)s, %(turno)s)
@@ -262,7 +262,7 @@ def agregar_reserva(self, datos_reserva):
         self.conn.commit()
         return self.cursor.lastrowid
 
-def modificar_reserva(self, id, nuevos_datos):
+     def modificar_reserva(self, id, nuevos_datos):
         self.cursor.execute("""
             UPDATE reservas
             SET id_cliente=%(id_cliente)s, id_plato=%(id_plato)s, id_bebida=%(id_bebida)s,
@@ -271,7 +271,7 @@ def modificar_reserva(self, id, nuevos_datos):
         """, {'id': id, **nuevos_datos})
         self.conn.commit()
 
-def eliminar_reserva(self, id):
+     def eliminar_reserva(self, id):
         self.cursor.execute("DELETE FROM reservas WHERE id=%s", (id,))
         self.conn.commit()                
    
