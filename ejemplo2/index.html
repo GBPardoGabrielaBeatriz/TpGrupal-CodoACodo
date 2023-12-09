@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/665c661a74.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>MENU</title>
+    <link rel="icon" href="imgs/food-and-restaurant.png" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div id="arriba" class="logo">
+        <img src="imgs/logo2.png" alt="logo" />
+        <h2>Rincón Gastronómico</h2>
+      </div>
+      <!--
+      <div class="Container">
+      <nav> 
+        <ul>
+        <li><a href="#inicio" onclick="seleccionar()">Quiénes Somos</a></li>
+        <li><a href="#menu" onclick="seleccionar()">Menu</a></li>
+        <li><a href="#sucursales" onclick="seleccionar()">Sucursales</a></li>
+        <li><a href="#contacto" onclick="seleccionar()">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>-->
+      <div class="Container">
+        <input type="checkbox" name="" id="check" />
+        <label for="check" class="icons">
+          <i class="fas fa-bars" id="menu-icon"></i>
+          <i class="fa-sharp fa-solid fa-xmark" id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+          <a href="#inicio" onclick="seleccionar()">Quiénes Somos</a>
+          <a href="#menu" onclick="seleccionar()">Menu</a>
+          <a href="#sucursales" onclick="seleccionar()">Sucursales</a>
+          <a href="#contacto" onclick="seleccionar()">Reserva</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- BANNER -->
+      <!--<section id="arriba" class="banner">
+        <h3>Bienvenidos
+        </h3>
+        <div><button>Pedir comida</button></div>
+      </section>-->
+      <section class="banner">
+        <div class="banner-text">
+          <h2>Rincón Gastronómico</h2>
+          <h1>Pedí tu <span>menú</span></h1>
+          <div>
+            <a href="#menu" onclick="seleccionar()" class="button1">MENÚ</a>
+            <a href="#contacto" onclick="seleccionar()" class="button2"
+              >REALIZÁ TU RESERVA</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- QUIENES SOMOS -->
+      <section id="inicio" class="quienessomos">
+        <div>
+          <img src="imgs/cook-657352_1280.jpg" alt="" />
+        </div>
+        <div class="caja">
+          <h3>Bienvenidos a <span>Rincón Gastronómico</span></h3>
+          <p>
+            Donde los sabores se convierten en experiencias inolvidables. En
+            nuestro encantador rincón, fusionamos la tradición con la
+            innovación, creando platos que son una celebración de la cocina
+            local e internacional. Nuestros talentosos chefs seleccionan
+            cuidadosamente los ingredientes más frescos y de la más alta calidad
+            para ofrecerte una experiencia gastronómica excepcional.
+          </p>
+        </div>
+      </section>
+
+      <!-- GALERIA DE FOTOS-->
+      <section class="gallery">
+        <img src="imgs/sopa.jpg" alt="Gallery Img1" class="gallery-img-1" /><img
+          src="imgs/papas.jpg"
+          alt="Gallery Img2"
+          class="gallery-img-2"
+        /><img
+          src="imgs/postre.jpg"
+          alt="Gallery Img3"
+          class="gallery-img-3"
+        /><img
+          src="imgs/huevos.jpg"
+          alt="Gallery Img4"
+          class="gallery-img-4"
+        /><img src="imgs/pasta.jpg" alt="Gallery Img5" class="gallery-img-5" />
+      </section>
+
+      <!-- GALERIA DE FOTOS-->
+
+      <!--ACA METEMOS GALERIA DE FOTOS-->
+      <!--  <div class="galeria">
+          <article class="cards">
+              <figure>
+                 <img src="imgs/burguer.jpg" alt="burguer en 1er plano">
+                  <figcaption>
+                      <h3> Burguer</h3>
+                  </figcaption>
+              </figure>
+          </article>
+          <article class="cards">
+              <figure>
+                  <img src="imgs/papas.jpg" alt="fritas en 1er plano">
+                  <figcaption>
+                      <h3>Fritas</h3>
+                  </figcaption>
+              </figure>
+          </article>
+          <article class="cards">
+              <figure>
+                  <img src="imgs/pizza.jpg" alt="pizzita en 1er plano">
+                  <figcaption>
+                      <h3> Pizza</h3>
+                  </figcaption>
+              </figure>
+          </article>
+          <article class="cards">
+            <figure>
+                <img src="imgs/pasta.jpg" alt="pastas en 1er plano">
+                <figcaption>
+                    <h3> Pastas</h3>
+                </figcaption>
+            </figure>
+        </article>
+      </div>
+      -->
+      <section id="menu" class="card">
+        <h3>Nuestros Productos</h3>
+        <div class="galeria">
+          <article class="cards">
+            <figure>
+              <img src="imgs/burguer.jpg" alt="burguer" />
+              <h3>Burguer</h3>
+            </figure>
+          </article>
+          <article class="cards">
+            <figure>
+              <img src="imgs/papas2.jpg" alt="fritas en 1er plano" />
+              <h3>Fritas</h3>
+            </figure>
+          </article>
+          <article class="cards">
+            <figure>
+              <img src="imgs/pizza.jpg" alt="pizzita en 1er plano" />
+              <h3>Pizza</h3>
+            </figure>
+          </article>
+          <article class="cards">
+            <figure>
+              <img src="imgs/pasta1.jpg" alt="pastas en 1er plano" />
+              <h3>Pastas</h3>
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <!--   <section id="opciones" class="tarjetas">
+        <h3>Especiales de la casa</h3>
+          <div class="caja-padre">
+            <div class="caja-hija">
+              <img src="imgs/pizza.jpg"  alt="" />
+              <h2>PIZZAS</h2>
+              <p>
+                Nuestras pizzas son el resultado de años de perfeccionamiento
+                y pasión por la cocina. Cada masa se amasa a mano y se hornea a 
+                la perfección en nuestro horno de leña, logrando esa textura 
+                crujiente y sabor inigualable que solo una pizza auténtica puede tener.
+              </p>
+              <button class="button">
+                <ion-icon name="pizza-outline"></ion-icon>
+                <span class="lable">Pizzas</span> 
+            </div>
+
+            <div class="caja-hija">
+              <img src="imgs/bebidas.jpg" class="img" alt="" />
+              <h2>BEBIDAS</h2>
+              <p>
+                Desde cócteles artesanales que despiertan tus 
+                sentidos hasta una amplia variedad de vinos y
+                 cervezas que te transportan a diferentes rincones del
+                  mundo, nuestra carta de bebidas ha sido diseñada con pasión y dedicación.
+              </p>
+              <button class="button">
+                <ion-icon name="beer-outline"></ion-icon>
+                <span class="lable">Bebidas</span>
+            </div>
+
+            <div class="caja-hija">
+              <img src="imgs/combos.jpg" class="img" alt="" />
+              <h2>COMBOS</h2>
+              <p>
+                Desde los amantes de la carne hasta los 
+                fanáticos de la comida vegetariana, nuestros 
+                combos son versátiles y deliciosos. Cada uno de ellos 
+                presenta una armoniosa combinación de platos principales, 
+                acompañamientos y bebidas, todo a un precio especial 
+                que hará que te sientas como un invitado especial en nuestra casa.
+              </p>
+              <button class="button">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                <span class="lable">Combos</span>
+              
+            </div>
+          </div>
+      </section> -->
+
+      <!-- Especiales de la casa -->
+
+      <section class="container top-categories">
+        <h2 class="heading-1">Especiales de la casa</h2>
+        <div class="container-categories">
+          <div class="card-category category-combos">
+            <p>Combos especiales</p>
+            <span>Ver más</span>
+          </div>
+          <div class="card-category category-after">
+            <p>After office</p>
+            <span>Ver más</span>
+          </div>
+          <div class="card-category category-pizza">
+            <p>Pizzas y pastas</p>
+            <span>Ver más</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Especiales de la casa -->
+
+      <!-- CARACTERISTICAS -->
+      <section id="sucursales" class="caracteristicas">
+        <div class="columna">
+          <p>
+            <i class="fa-sharp fa-regular fa-circle-check"></i> Cualquier medio
+            de pago
+          </p>
+          <p>
+            <i class="fa-sharp fa-regular fa-circle-check"></i> Elaboracion en
+            el acto
+          </p>
+          <p>
+            <i class="fa-sharp fa-regular fa-circle-check"></i> Amplia zona de
+            reparto
+          </p>
+          <p>
+            <i class="fa-sharp fa-regular fa-circle-check"></i> Primera calidad
+          </p>
+        </div>
+        <div class="columna">
+          <p>Sucursal Villa Urquiza</p>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.131638520314!2d-58.486820124814805!3d-34.57553555600936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb667be103959%3A0xc0278e1f8635dec7!2sAv.%20Olaz%C3%A1bal%20%26%20Av%20Triunvirato%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1698079109651!5m2!1ses!2sar"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <div class="columna">
+          <p>Sucursal Belgrano</p>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.8112364513263!2d-58.46258698933232!3d-34.558334454989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb42b032dac83%3A0xaf0679661b305640!2sAv.%20Cabildo%20%26%20Av.%20Monroe%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1698077636716!5m2!1ses!2sar"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACTO -->
+      <section id="contacto" class="contacto">
+        <h3>Realizá tu reserva</h3>
+
+        <!--Aca metemos el formulario -->
+        <table>
+            <tr>
+            <td class="contenedor-centrado">
+            <a href="altas.html">Alta de reservas</a>
+            </td>
+            </tr>
+            <tr>
+            <td class="contenedor-centrado">
+            <a href="listado.html">Listado de reservas</a>
+            </td>
+            </tr>
+            <tr>
+    
+            <td class="contenedor-centrado">
+            <a href="modificaciones.html">Modificar datos de reserva</a>
+            </td>
+            </tr>
+            <tr>
+            <td class="contenedor-centrado">
+            <a href="listadoEliminar.html">Eliminar reserva</a>
+            </td>
+            </tr>
+            </table>
+          
+
+
+
+      <!-- FOOTER -->
+    </main>
+    <footer>
+      <a href="#arriba" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+      <h5>©CodoaCodo2023</h5>
+    </footer>
+
+    <script src="formulario.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
