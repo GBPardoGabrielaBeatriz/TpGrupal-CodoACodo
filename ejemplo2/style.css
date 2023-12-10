@@ -871,5 +871,14 @@ footer .arriba {
 
 /* FORMULARIO */
 
+/* Responsive*/
+@media only screen and (max-width: 600px) {
+  .form {
+    padding: 10px;
+  }
 
+  .input {
+    margin-bottom: 10px;
+  }
+}
 }

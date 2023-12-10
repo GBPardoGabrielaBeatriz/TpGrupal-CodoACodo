@@ -2,6 +2,7 @@
 # Instalar con pip install Flask
 from flask import Flask, request, jsonify
 from flask import request
+from flask import Flask, render_template, request
 # Instalar con pip install flask-cors
 from flask_cors import CORS
 # Instalar con pip install mysql-connector-python
@@ -353,6 +354,22 @@ def agregar_reserva ():
 if __name__ == "__main__":
      app.run(debug=True)
 
+#After Office - Reservas
+@app.route('/')
+def index():
+    return render_template('after.html')
+
+@app.route('/procesar_formulario', methods=['POST'])
+def procesar_formulario():
+    nombre = request.form['nombre']
+    cantidad = request.form['cantidad']
+
+
+
+    return f'¡Reserva recibida! Nombre: {nombre}, Cantidad: {cantidad}'
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 '''
 @app.route("/reservas", methods=["POST"])
